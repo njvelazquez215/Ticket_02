@@ -16,7 +16,7 @@
         public:
             //Constructor
             Ticket();
-            Ticket(string);
+            Ticket(string); //sobrecarga. tienen el mismo nombre. diferencio a traves de la lista de parámetro.
 
             //Destructor
             ~Ticket();
@@ -41,7 +41,6 @@
             void ParsearDatos();
 
         protected:
-
     };
 
 #endif //TICKET_02_TICKET_H

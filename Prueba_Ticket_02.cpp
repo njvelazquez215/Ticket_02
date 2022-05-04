@@ -4,8 +4,8 @@
 
 using namespace std;
 
-int main(int, char**) {
-
+int main()
+{
     Ticket ticketUno("835629364412042022"); //tiene fecha agregada.. hacer el parcer y atoi
     Ticket ticketDos("739264422807052022"); //fecha 07/05/2022
     Ticket ticketTres;

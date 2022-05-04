@@ -15,7 +15,6 @@ Ticket::Ticket(string datos)
 {
     this->datos = datos;
     this->nro = datos;
-    //this->fecha = datos; //fijarse si esto va o no
     ParsearDatos();
 }
 
@@ -23,12 +22,10 @@ Ticket::Ticket(string datos)
 Ticket::~Ticket()
 {}
 
-
 void Ticket::AsignarDatos(string datos)
 {
     this->datos = datos;
     this->nro = datos;
-    //this ->fecha = datos;
 }
 
 void Ticket::MostrarDatos()
@@ -55,7 +52,7 @@ Fecha Ticket::ObtenerFecha()
 
 void Ticket::ParsearDatos()
 {
-// variables auxiliares
+    // variables auxiliares
     string informacion;
     if (datos.length() < 10)
     {
@@ -77,27 +74,69 @@ void Ticket::ParsearDatos()
         informacion = "";
     }
 
-    if (datos.length() > 10 && datos.length() <= 16) {
-        for (int i = 10; i < datos.length(); i++) {
+    if (datos.length() > 10 && datos.length() <= 16)
+    {
+        for (int i = 10; i < datos.length(); i++)
+        {
 
-            if (i >= 10 && i < 12) {
+            if (i >= 10 && i < 12)
+            {
                 informacion += datos[i];
             }
-            if (i == 11) {
+            if (i == 11)
+            {
                 fecha.AsignarDD(stoi(informacion));
                 informacion = "";
             }
-            if (i >= 12 && i < 14) {
+            if (i >= 12 && i < 14)
+            {
                 informacion += datos[i];
             }
-            if (i == 13) {
+            if (i == 13)
+            {
                 fecha.AsignarMM(stoi(informacion));
                 informacion = "";
             }
-            if (i >= 14 && i < 16) {
+            if (i >= 14 && i < 16)
+            {
                 informacion += datos[i];
             }
-            if (i == 15) {
+            if (i == 15)
+            {
+                fecha.AsignarAAAA(stoi(informacion));
+                informacion = "";
+            }
+        }
+    }
+    if (datos.length() > 10 && datos.length() > 16)
+    {
+        for (int i = 10; i < 16; i++)
+        {
+
+            if (i >= 10 && i < 12)
+            {
+                informacion += datos[i];
+            }
+            if (i == 11)
+            {
+                fecha.AsignarDD(stoi(informacion));
+                informacion = "";
+            }
+            if (i >= 12 && i < 14)
+            {
+                informacion += datos[i];
+            }
+            if (i == 13)
+            {
+                fecha.AsignarMM(stoi(informacion));
+                informacion = "";
+            }
+            if (i >= 14 && i < 16)
+            {
+                informacion += datos[i];
+            }
+            if (i == 15)
+            {
                 fecha.AsignarAAAA(stoi(informacion));
                 informacion = "";
             }
