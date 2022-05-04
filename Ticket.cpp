@@ -26,6 +26,7 @@ void Ticket::AsignarDatos(string datos)
 {
     this->datos = datos;
     this->nro = datos;
+    ParsearDatos();
 }
 
 void Ticket::MostrarDatos()
