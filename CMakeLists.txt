@@ -3,4 +3,4 @@ project(Ticket_02)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Ticket_02 Prueba_Ticket_02.cpp Ticket.cpp Ticket.h)
+add_executable(Ticket_02 Prueba_Ticket_02.cpp Ticket.cpp Ticket.h Fecha.cpp Fecha.h)

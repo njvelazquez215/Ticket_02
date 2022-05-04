@@ -37,6 +37,9 @@
             string nro;
             Fecha fecha;
 
+            //Servicio
+            void ParsearDatos();
+
         protected:
 
     };

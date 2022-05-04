@@ -10,12 +10,12 @@ using namespace std;
     		int mm;
     		int aaaa;
     
-    		int ProcesarCompararFecha(const int, const int, const int) const;
+    		int ProcesarCompararFecha(const int, const int, const int) const; //el const del método significa no puede alterar ningun atributo del objeto
 
 		public:
 			// Constructor
 			Fecha();
-			Fecha(const int, const int, const int);
+			Fecha(const int, const int, const int); //el const del parametro no modifica el parámetro del método
 			
 			// Destructor
 			~Fecha();
